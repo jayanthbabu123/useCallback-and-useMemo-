@@ -40,3 +40,22 @@ button {
 button:hover {
   background-color: #d34a2f;
 }
+
+table {
+  border: 1px solid #e5e5e5;
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+td,
+th {
+  border: 1px solid #e5e5e5;
+  height: 30px;
+}
+
+div {
+  margin-bottom: 10px;
+  text-align: center;
+  font-size: 18px;
+}

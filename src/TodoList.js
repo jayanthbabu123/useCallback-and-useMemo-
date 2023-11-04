@@ -1,14 +1,14 @@
-// TodoList.js
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import TodoItem from "./TodoItem";
 
 const TodoList = ({ todos }) => {
   const [todoList, setTodoList] = useState(todos);
 
-  const handleDelete = (todoToDelete) => {
-    setTodoList(todoList.filter((todo) => todo !== todoToDelete));
-  };
-
+  const handleDelete = useCallback((todoToDelete) => {
+    setTodoList((prevTodoList) =>
+      prevTodoList.filter((todo) => todo !== todoToDelete),
+    );
+  }, []);
   return (
     <div>
       <table className="todo-table">
